@@ -194,6 +194,7 @@ namespace SledgeLib
                     LuaFunction? LuaAttr = ModMethodInfo.GetCustomAttribute<LuaFunction>();
                     if (LuaAttr == null)
                         continue;
+                    Log.Verbose("Lua function registered: {0}", ModMethodInfo.Name);
 
                     RegisteredLuaFunction LuaFunc = new RegisteredLuaFunction(ModMethodInfo, Ctx);
 
